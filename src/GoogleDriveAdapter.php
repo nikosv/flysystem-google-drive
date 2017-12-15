@@ -1068,7 +1068,7 @@ class GoogleDriveAdapter extends AbstractAdapter
         } else {
             $params = [
                 'data' => $contents,
-                'uploadType' => 'media',
+                'uploadType' => $config->get('uploadType', 'media'),
                 'fields' => self::FETCHFIELDS_GET
             ];
             if ($mode === 'insert') {
